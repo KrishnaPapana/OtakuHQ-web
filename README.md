@@ -52,7 +52,3 @@ OtakuHQ is a Chrome extension that gives you a full anime hub from one toolbar c
 ## Privacy
 
 OtakuHQ does not collect, upload, or share any user data. All preferences and favorites are stored locally in your browser. See the full [Privacy Policy](https://krishnapapana.github.io/OtakuHQ-web/privacy-policy.html).
-
-## Contact
-
-neuralcurrentdev@gmail.com
