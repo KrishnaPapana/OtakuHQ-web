@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OtakuHQ — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for the OtakuHQ Chrome extension." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+
+      <section class="card policy-section">
+        <p class="eyebrow">OtakuHQ</p>
+        <h1>Privacy Policy</h1>
+        <p class="muted">Last updated: April 23, 2026</p>
+
+        <p>
+          OtakuHQ is a Chrome extension that helps anime fans discover streaming
+          platforms, track a full weekly airing schedule, save favorites, receive
+          episode alerts, search titles, browse trending charts and genre
+          rankings, and read anime news — all from one popup.
+        </p>
+
+        <h2>Information OtakuHQ does NOT collect</h2>
+        <ul class="no-bullet">
+          <li>Personal account information or login credentials</li>
+          <li>Payment or financial information</li>
+          <li>Browsing history or visited URLs</li>
+          <li>Any data transmitted to the developer or any third-party server</li>
+        </ul>
+
+        <h2>Information stored locally in Chrome</h2>
+        <p>
+          All data OtakuHQ saves lives in <code>chrome.storage.local</code> on
+          your device. It never leaves your browser.
+        </p>
+        <table>
+          <thead>
+            <tr><th>Item</th><th>What it stores</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Region preference</td>
+              <td>Your selected region filter (All / Global / India / US)</td>
+            </tr>
+            <tr>
+              <td>Favorites</td>
+              <td>Anime you have hearted — title, cover image URL, AniList URL, next-episode data</td>
+            </tr>
+            <tr>
+              <td>Notification preference</td>
+              <td>Whether episode alert notifications are enabled (true/false)</td>
+            </tr>
+            <tr>
+              <td>Notified set</td>
+              <td>Log of notification IDs already sent, capped at 200 entries, to prevent duplicate alerts</td>
+            </tr>
+            <tr>
+              <td>Unofficial domain cache</td>
+              <td>Resolved working URLs for fan streaming sites, refreshed each time you open the popup</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>External data sources accessed</h2>
+        <table>
+          <thead>
+            <tr><th>Source</th><th>Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>graphql.anilist.co</code></td>
+              <td>Anime schedule, releases, trending, search, and genre rankings</td>
+            </tr>
+            <tr>
+              <td><code>news.google.com</code></td>
+              <td>Anime news RSS headlines, locale-matched to your region</td>
+            </tr>
+            <tr>
+              <td>Fan-site seed URLs</td>
+              <td>HTTP fetch used only to follow redirects and find the current working domain — no page content is scraped or stored</td>
+            </tr>
+            <tr>
+              <td><code>google.com/s2/favicons</code></td>
+              <td>Favicon images for the streaming platform icon strip</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>All requests are read-only. No user data is included in any outbound request.</p>
+
+        <h2>How data is used</h2>
+        <p>OtakuHQ uses data solely for its single purpose:</p>
+        <ul>
+          <li>Displaying anime platforms, schedule, releases, trending, search results, and news inside the popup</li>
+          <li>Restoring your saved region preference and favorites across browser sessions</li>
+          <li>Sending local Chrome notifications 15 minutes before a favorited episode airs</li>
+          <li>Showing a badge counter on the toolbar icon for favorites airing today</li>
+          <li>Resolving current working domains for fan streaming sites</li>
+        </ul>
+        <p>
+          OtakuHQ does <strong>not</strong> use data for advertising, profiling,
+          analytics, or any purpose unrelated to its single purpose. OtakuHQ does
+          not sell user data.
+        </p>
+
+        <h2>Permissions justification</h2>
+        <table>
+          <thead>
+            <tr><th>Permission</th><th>Justification</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>storage</code></td>
+              <td>Store region, favorites, notification preference, domain cache, and sent-notification log locally on your device</td>
+            </tr>
+            <tr>
+              <td><code>alarms</code></td>
+              <td>Run a 1-minute periodic background check to fire episode alerts and update the toolbar badge counter</td>
+            </tr>
+            <tr>
+              <td><code>notifications</code></td>
+              <td>Display Chrome push notifications when a favorited episode is about to air</td>
+            </tr>
+            <tr>
+              <td><code>https://graphql.anilist.co/*</code></td>
+              <td>Fetch all anime data (schedule, releases, trending, search, genres) from AniList's public API</td>
+            </tr>
+            <tr>
+              <td><code>https://news.google.com/*</code></td>
+              <td>Fetch the anime news RSS feed</td>
+            </tr>
+            <tr>
+              <td><code>&lt;all_urls&gt;</code></td>
+              <td>Follow HTTP redirects from fan-site seed URLs to discover current working domains. OtakuHQ does not read or modify any page you visit.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Data sharing</h2>
+        <p>
+          OtakuHQ does not share any user data with third parties. All outbound
+          network requests are direct, read-only calls to public APIs and contain
+          no personally identifiable information.
+        </p>
+
+        <h2>Data retention</h2>
+        <ul>
+          <li><strong>Region preference</strong> — until you change it or uninstall the extension.</li>
+          <li><strong>Favorites</strong> — until you remove each favorite or uninstall the extension.</li>
+          <li><strong>Notification preference</strong> — until you toggle it off or uninstall.</li>
+          <li><strong>Notified set</strong> — auto-trimmed to 200 most recent entries; purged on uninstall.</li>
+          <li><strong>Unofficial domain cache</strong> — refreshed on each popup open; purged on uninstall.</li>
+        </ul>
+
+        <h2>Security</h2>
+        <ul>
+          <li>OtakuHQ uses the minimum permissions required for its functionality.</li>
+          <li>It does not inject scripts into web pages.</li>
+          <li>It does not execute remote code.</li>
+          <li>It does not require user sign-in or account creation.</li>
+          <li>All data processing happens locally within the extension.</li>
+        </ul>
+
+        <h2>Children's privacy</h2>
+        <p>
+          OtakuHQ does not knowingly collect any information from children.
+          Adult content is explicitly excluded from all AniList API queries
+          (<code>isAdult: false</code>).
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          If data practices change, this policy will be updated with a new date.
+          Continued use of the extension after an update constitutes acceptance
+          of the revised policy.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:neuralcurrentdev@gmail.com" style="color:var(--accent-2)">neuralcurrentdev@gmail.com</a>
+        </p>
+
+        <div class="back-link">
+          <a href="index.html">← Back to OtakuHQ</a>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

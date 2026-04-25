@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OtakuHQ — Anime Control Room for Chrome</title>
+    <meta
+      name="description"
+      content="OtakuHQ is a Chrome extension with a full weekly anime schedule, favorites, episode alerts, trending charts, search, streaming platforms, and anime news — all from one popup."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+
+      <!-- Hero -->
+      <section class="card">
+        <div class="hero-body">
+          <p class="eyebrow">Chrome Extension</p>
+          <h1>OtakuHQ</h1>
+          <p class="lead">
+            Your personal anime control room — weekly schedule, favorites,
+            episode alerts, trending charts, search, streaming links, and
+            anime news. One click on the toolbar icon.
+          </p>
+
+          <div class="badge-row">
+            <span class="badge">Weekly Schedule</span>
+            <span class="badge">Live Countdowns</span>
+            <span class="badge">Favorites + Alerts</span>
+            <span class="badge">Trending</span>
+            <span class="badge">Anime Search</span>
+            <span class="badge">Official &amp; Fan Sites</span>
+            <span class="badge">Anime News</span>
+            <span class="badge">Top by Genre</span>
+          </div>
+
+          <div class="actions">
+            <a class="button button-secondary" href="privacy-policy.html">Privacy Policy</a>
+            <a class="button button-primary" href="https://chromewebstore.google.com/" target="_blank" rel="noreferrer">Chrome Web Store</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature grid -->
+      <div class="feature-grid">
+
+        <article class="card feature-card">
+          <div class="feature-icon">📅</div>
+          <p class="card-kicker">Schedule</p>
+          <h2>Full Week Schedule</h2>
+          <p>
+            Mon–Sun tab bar for the current week. Each day loads on demand and
+            caches instantly. Every episode card shows a live countdown — pink/cyan
+            gradient when hours away, gold when less than an hour, orange under
+            15 minutes, pulsing red when airing now.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">♥</div>
+          <p class="card-kicker">Favorites</p>
+          <h2>Save &amp; Track Anime</h2>
+          <p>
+            Heart any anime from the schedule, search results, or releases. Your
+            favorites appear in a dropdown from the ♥ icon in the header, each
+            with a live episode countdown. The toolbar badge shows how many
+            favorites are airing today.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">🔔</div>
+          <p class="card-kicker">Alerts</p>
+          <h2>Episode Notifications</h2>
+          <p>
+            Toggle "Episode alerts" to receive a Chrome notification 15 minutes
+            before any favorited episode airs — even with the popup closed. The
+            background service worker checks every minute so you never miss a drop.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">🔢</div>
+          <p class="card-kicker">Badge</p>
+          <h2>Toolbar Badge Counter</h2>
+          <p>
+            The extension icon badge updates every minute, showing the number of
+            your favorited shows with an episode airing today. Hover the icon for
+            a precise tooltip.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">📈</div>
+          <p class="card-kicker">Hot Now</p>
+          <h2>Trending This Week</h2>
+          <p>
+            A horizontal scroll strip of the top 15 currently trending anime on
+            AniList. Rank badges highlight the top 3; score badges color-code
+            by quality — green, yellow, red.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">⌕</div>
+          <p class="card-kicker">Search</p>
+          <h2>Anime Search</h2>
+          <p>
+            Search any title via AniList. Results show cover art, score, format,
+            episode count, and genre tags. Debounced input keeps it fast.
+            Favorite directly from search results.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">▶</div>
+          <p class="card-kicker">Watch</p>
+          <h2>Streaming Platforms</h2>
+          <p>
+            Compact icon strips split into Official (Crunchyroll, Netflix, HiDive,
+            Prime Video, Disney+, Muse Asia, and more) and Fan Sites (HiAnime,
+            9Anime, AnimePahe, Gogoanime, AnimeKai) with live domain resolution.
+            Filter by region or search by name.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">📰</div>
+          <p class="card-kicker">Fresh Reads</p>
+          <h2>Anime News</h2>
+          <p>
+            Six recent headlines from Google News, locale-matched to your selected
+            region (All / Global / India / US). One tap opens the source article.
+          </p>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-icon">✦</div>
+          <p class="card-kicker">Discover</p>
+          <h2>Top by Genre</h2>
+          <p>
+            Tap any of 16 genre pills — Action, Romance, Psychological, Mecha,
+            Horror, Slice of Life, and more — to browse the highest-scored anime
+            in that genre, with pagination.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Permissions at a glance -->
+      <section class="card">
+        <h2>Permissions at a glance</h2>
+        <table>
+          <thead>
+            <tr><th>Permission</th><th>Why it's needed</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>storage</code></td>
+              <td>Save region preference, favorites, notification toggle, domain cache, and sent-alert log — all locally on your device.</td>
+            </tr>
+            <tr>
+              <td><code>alarms</code></td>
+              <td>Run a 1-minute background check to fire episode alerts and update the badge counter.</td>
+            </tr>
+            <tr>
+              <td><code>notifications</code></td>
+              <td>Show a Chrome notification 15 minutes before a favorited episode airs.</td>
+            </tr>
+            <tr>
+              <td><code>graphql.anilist.co</code></td>
+              <td>Fetch schedule, releases, trending, search, and genre data from AniList's public API.</td>
+            </tr>
+            <tr>
+              <td><code>news.google.com</code></td>
+              <td>Fetch the anime news RSS feed.</td>
+            </tr>
+            <tr>
+              <td><code>&lt;all_urls&gt;</code></td>
+              <td>Follow HTTP redirects to discover current working domains for fan streaming sites. OtakuHQ does not read or modify any web page you visit.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- About / footer -->
+      <section class="card">
+        <h2>About OtakuHQ</h2>
+        <p class="footer-note">
+          OtakuHQ does not host or stream anime content. It is an anime discovery
+          and information companion that links to official streaming services and
+          displays publicly available data from AniList and Google News. No user
+          data is uploaded or shared. All preferences and favorites are stored
+          locally in your browser.
+        </p>
+        <p class="footer-note" style="margin-top:12px">
+          Contact:
+          <a href="mailto:neuralcurrentdev@gmail.com" style="color:var(--accent-2); text-decoration:none;">neuralcurrentdev@gmail.com</a>
+        </p>
+      </section>
+
+    </main>
+  </body>
+</html>
