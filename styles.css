@@ -61,19 +61,7 @@ h3 { font-size: 16px; color: var(--accent-2); margin-bottom: 4px; }
 .muted { font-size: 14px; }
 
 /* ── Hero ── */
-.hero-card { padding: 0; overflow: hidden; }
-
-.hero-banner {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 28px 28px 0 0;
-}
-
-.hero-card .hero-body {
-  max-width: 640px;
-  padding: 32px;
-}
+.hero-body { max-width: 640px; }
 
 .badge-row {
   display: flex;
